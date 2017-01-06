@@ -3,8 +3,7 @@ pub fn sum_of_squares(n: i64) -> i64 {
 }
 
 pub fn square_of_sum(n: i64) -> i64 {
-    let sum: i64 = (1..n+1).sum();
-    sum * sum
+    (1..n+1).sum::<i64>().pow(2)
 }
 
 pub fn difference(n: i64) -> i64 {
