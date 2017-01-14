@@ -13,7 +13,7 @@ impl PascalsTriangle {
 }
 
 fn calc_row(n: u32) -> Vec<u32> {
-    let mut next_row: Vec<u32> = Vec::with_capacity(n as usize + 1);
+    let mut next_row: Vec<u32> = Vec::with_capacity(n as usize);
     (1..n + 2).fold(1, |acc, x| {
         next_row.push(acc);
         acc * (n + 1 - x) / x
