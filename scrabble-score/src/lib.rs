@@ -12,7 +12,5 @@ fn value(c: char) -> u32 {
 }
 
 pub fn score(word: &str) -> u32 {
-    let owned_word = String::from(word).to_lowercase();
-
-    owned_word.chars().fold(0, |acc, x| acc + value(x))
+    word.to_lowercase().chars().fold(0, |acc, x| acc + value(x))
 }
