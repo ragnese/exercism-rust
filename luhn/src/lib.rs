@@ -23,7 +23,12 @@ pub fn is_valid(num: &str) -> bool {
 
 fn double_mod_9_every_other(i: usize, val: u32) -> u32 {
     match (i + 1) % 2 {
-        0 => (2 * val) % 9,
+        0 => {
+            match 2 * val {
+                9 => 9,
+                _ => (2 * val) % 9,
+            }
+        }
         _ => val,
     }
 }
